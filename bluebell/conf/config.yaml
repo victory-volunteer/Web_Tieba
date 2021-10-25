@@ -1,0 +1,30 @@
+name: "bluebell"
+mode: "release"
+#  release 代表生产模式  dev 代表开发模式
+port: 8080
+version: "v0.0.1"
+start_time: "2020-07-01"
+machine_id: 1
+
+auth:
+  jwt_expire: 8760 #365*24的结果
+log:
+  level: "debug"   #日志级别
+  filename: "bluebell.log"
+  max_size: 200    #文件大小
+  max_age: 30      #储存30天
+  max_backups: 7   #备份数量
+mysql:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: "root123"
+  dbname: "bluebell"
+  max_open_conns: 200
+  max_idle_conns: 50
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  password: ""
+  db: 0            #0代表没有
+  pool_size: 100
